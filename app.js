@@ -12,7 +12,6 @@ app.get("/", function (req, res) {
 app.post("/",function (req, res) {
     var pin = req.body.pincode;
     var date = req.body.date;
-    console.log(date);
     var year = "2F" + date[0] + date[1] + date[2] + date[3];
     var month = "2F"+date[5]+date[6]
     var day = date[8] + date[9];
@@ -22,11 +21,10 @@ app.post("/",function (req, res) {
         responce.on("data", function (data) {
             var vaccineData = JSON.parse(data);
           //  var data1 = (vaccineData.sessions[0]);
-            console.log(vaccineData.sessions);
             res.render("result", { vaccineData:vaccineData.sessions});        
         })
     })
 })
-app.listen(process.env.PORT, function (req, res) {
+app.listen(process.env.PORT || 3000, function (req, res) {
     console.log("server started at port 3000");
 })

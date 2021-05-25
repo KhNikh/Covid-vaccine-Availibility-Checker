@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaccine Slots</title>
-</head>
-<body>
-    <h1>Check the available stot near You</h1>
+<div class="home">
+<%- include("partials/header") %>
+
+   
     <form action="/" method="post">
-         <input type="text" name="pincode" placeholder="123456">
+       
+        <h1>Check the available slot near You</h1>
+        <div class="form-group">
+
+         <label for="">Pincode</label>
+         <textarea type="text" name="pincode" rows = "1" cols="20" placeholder="123456"></textarea>
+        </div>
+        <div class="form-group">
+         <label for="">Date</label>
          <input type="date" name="date">
-         <button type="submit" name="submit">Search</button>
+        </div>
+         <button type="submit" class="btn btn-primary">Search</button>
+    
     </form>
-</body>
-</html>
+
+ <!-- <%- include("partials/footer") %> -->
+
+</div>
