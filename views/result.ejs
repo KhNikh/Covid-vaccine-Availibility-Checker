@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    
+    <% for(var i = 0; i < vaccineData.length; i++){ %>
+        <h1><%= vaccineData[i].name %></h1>
+        <p>
+           <ul>
+             <li>Block Name = <%= vaccineData[i].block_name %></li>
+             <li>Address = <%= vaccineData[i].address %></li>
+             <li>fees Type = <%= vaccineData[i].fee_type %></li>
+             <li>Fees = <%= vaccineData[i].fee %></li>
+             <li>Date = <%= vaccineData[i].date %></li>
+             <li>Available Dose 1 = <%= vaccineData[i].available_capacity_dose1 %></li>
+             <li>Available Dose 2 = <%= vaccineData[i].available_capacity_dose2 %></li>
+             <li>Vaccine name = <%= vaccineData[i].vaccine %></li>
+             <li> Min Age Limit = <%= vaccineData[i].min_age_limit %></li>
+           </ul> 
+        
+        </p>
+    <% } %>
+    
+</body>
+</html>
