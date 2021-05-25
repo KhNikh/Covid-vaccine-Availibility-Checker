@@ -18,6 +18,7 @@ app.post("/",function (req, res) {
     date = day + "%" + month + "%" + year;
     const url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+ pin +"&date=" + date+"";
     https.get(url, function (responce) {
+        
         responce.on("data", function (data) {
             var vaccineData = JSON.parse(data);
           //  var data1 = (vaccineData.sessions[0]);
